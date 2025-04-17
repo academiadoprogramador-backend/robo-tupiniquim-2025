@@ -1,12 +1,12 @@
 ﻿namespace RoboTupiniquim.ConsoleApp;
 
-public static class Robo
+public class Robo
 {
-    public static int posicaoX;
-    public static int posicaoY;
-    public static char direcao;
+    public int posicaoX;
+    public int posicaoY;
+    public char direcao;
 
-    public static void Explorar(char[] instrucoes)
+    public void Explorar(char[] instrucoes)
     {
         for (int i = 0; i < instrucoes.Length; i++)
         {
@@ -23,7 +23,7 @@ public static class Robo
         }
     }
 
-    public static void VirarEsquerda()
+    public void VirarEsquerda()
     {
         if (direcao == 'N')
             direcao = 'O';
@@ -38,7 +38,7 @@ public static class Robo
             direcao = 'N';
     }
 
-    public static void VirarDireita()
+    public void VirarDireita()
     {
         if (direcao == 'N')
             direcao = 'L';
@@ -53,7 +53,7 @@ public static class Robo
             direcao = 'N';
     }
 
-    public static void Mover()
+    public void Mover()
     {
         if (direcao == 'N')
             posicaoY++;
@@ -68,7 +68,7 @@ public static class Robo
             posicaoX++;
     }
 
-    public static void ExibirCoordenadas()
+    public void ExibirCoordenadas()
     {
         Console.WriteLine($"Posição final do Robô: {posicaoX} {posicaoY} {direcao}");
         Console.Read();
